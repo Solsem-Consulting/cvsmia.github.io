@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVSmia Deployment Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CVSmia Deployment</h1>
+        <p>This site contains all deployment artifacts for the <strong>cvsmia</strong> system.</p>
+        <ul id="file-list">
+            <!-- Add your deployment files here -->
+            <!-- Example: <li><a href="cvsmia-v1.0.0.zip">cvsmia-v1.0.0.zip</a></li> -->
+        </ul>
+    </div>
+    <script>
+        // If you'd like to dynamically populate files, you can list them here:
+        const files = [
+            // 'cvsmia-v1.0.0.zip',
+            // 'Dockerfile',
+            // 'docker-compose.yml',
+            // 'deployment.yaml'
+        ];
+        const list = document.getElementById('file-list');
+        files.forEach(file => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = file;
+            a.textContent = file;
+            li.appendChild(a);
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>
